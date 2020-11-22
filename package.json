@@ -1,0 +1,57 @@
+{
+  "name": "next-with-typescript",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "export": "npm run build && next export",
+    "lint": "eslint './**/*.{ts,tsx,js,jsx}'",
+    "test": "jest --coverage __test__",
+    "qawolf": "qawolf test --headless --all-browsers # before you run this command, make sure your local web server is ready.",
+    "qawolf:create": "qawolf create ; npm run prettier",
+    "prettier": "prettier . --write"
+  },
+  "dependencies": {
+    "@material-ui/core": "4.11.0",
+    "@material-ui/icons": "4.9.1",
+    "next": "10.0.2",
+    "node-sass": "5.0.0",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-redux": "7.2.2",
+    "redux": "4.0.5",
+    "styled-components": "5.2.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "devDependencies": {
+    "@types/enzyme": "3.10.8",
+    "@types/jest": "26.0.15",
+    "@types/node": "14.14.9",
+    "@types/react": "17.0.0",
+    "@types/react-redux": "7.1.11",
+    "@types/styled-components": "5.1.4",
+    "@typescript-eslint/eslint-plugin": "4.8.1",
+    "@typescript-eslint/parser": "4.8.1",
+    "babel-plugin-styled-components": "1.12.0",
+    "enzyme": "3.11.0",
+    "enzyme-adapter-react-16": "1.15.5",
+    "eslint": "7.14.0",
+    "eslint-config-prettier": "6.15.0",
+    "eslint-plugin-eslint-comments": "3.2.0",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-react": "7.21.5",
+    "husky": "4.3.0",
+    "jest": "26.6.3",
+    "prettier": "2.2.0",
+    "pretty-quick": "3.1.0",
+    "qawolf": "1.6.0",
+    "ts-jest": "26.4.4",
+    "typescript": "4.1.2"
+  }
+}
