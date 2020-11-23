@@ -8,7 +8,7 @@ setInterval(() => {
 export default (() => {
   return (
     <Layout>
-      <Timer />
+      <Timer color="red" />
     </Layout>
   );
 }) as React.FC;
