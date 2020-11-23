@@ -24,9 +24,7 @@ interface TimerViewProps {
 export const timer = new Timer();
 
 const TimerView: React.FC<TimerViewProps> = ({ color }: TimerViewProps) => {
-  return (
-    <Observer>{() => <div style={{ color }}>{timer.count}</div>}</Observer>
-  );
+  return <Observer render={() => <div style={{ color }}>{timer.count}</div>} />;
 };
 
 export default TimerView;
