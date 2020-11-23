@@ -1,5 +1,5 @@
 import { makeAutoObservable } from 'mobx';
-import { observer } from 'mobx-react';
+import { Observer } from 'mobx-react';
 
 class Timer {
   count = 0;
@@ -18,12 +18,15 @@ class Timer {
 }
 
 interface TimerViewProps {
-  timer: Timer;
+  color: string;
 }
 
-const TimerView = observer<React.FC<TimerViewProps>>(({ timer }) => {
-  return <>{timer.count}</>;
-});
-
 export const timer = new Timer();
-export default (() => <TimerView timer={timer} />) as React.FC;
+
+const TimerView: React.FC<TimerViewProps> = ({ color }: TimerViewProps) => {
+  return (
+    <Observer>{() => <div style={{ color }}>{timer.count}</div>}</Observer>
+  );
+};
+
+export default TimerView;
