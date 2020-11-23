@@ -5,7 +5,7 @@ module.exports = {
   env: {
     es6: true,
   },
-  ignorePatterns: ['node_modules', 'build', 'coverage', 'out'],
+  ignorePatterns: ['node_modules', 'build', 'coverage', 'out', 'playground'],
   plugins: ['import', 'eslint-comments'],
   extends: [
     'eslint:recommended',
